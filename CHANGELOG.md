@@ -1,187 +1,206 @@
 # Change Log
 
-## [3.1.0] 2024-10-21
+## [4.0.3] 2024-08-19
 
-### Updates & Improvements
+- Update dependencies
+- Fix DefaultProps deprecation warnings
 
-- update Bootstrap to v5.3.3
-- all plugins updated to the latest version
+## [4.0.2] 2023-08-23
 
-## [3.0.6] 2022-10-10
+- Fix react hooks rule issue
 
-### Updates & Improvements
+## [4.0.1] 2023-05-29
 
-- update Bootstrap to v5.2.2
-- update Popper to v2.11.6
-- add new page: Validation Page
-- update `start-0` and `end-0` classes on RTL
-- fix perfectScrollbar issue on RTL
-- fix the NavTabs second active tab issue
-- move the flatpickr init on the main JS file
+- Update dependencies
+- Fix installation issues
 
-## [3.0.5] 2022-06-14
+## [4.0.0] 2022-07-04
 
-### BugFixing
+- Rename components prefix from Sui to Soft.
+- Update dependencies.
+- Fix the peer dependencies issue.
+- Fix the eslint issue with react-app.
+- Migrate eslint config from airbnb to react-app.
 
-- fix inputs on RTL
-- update <html> tag border
+## [3.1.0] 2022-03-02
 
-## [3.0.4] 2022-06-07
+### Bug fixing
 
-### Update and Improvements
+- Add the color prop to the useMemo dependencies list of ProgressLineChart
+- Fix the non-nested route issue
+- Momoized the context provider values
+- Fix the conditionally used of useContext for SoftPagination component
+- Fix the import/no-anonymouse-default-export
+- Add a new command `install:peer-deps` for fixing the peer dependencies issue when installing the dependencies using npm
 
-- update Bootstrap to v5.2.0-beta1
-- fix modal close button on docs
-- update color of `.form-control` on Dark
-- fix Chat Page on responsive
+### Major style changes
 
-## [3.0.3] 2022-03-07
+### Deleted components
 
-### Update and Improvements
+### Added components
 
-- fix running 'npm install' issue
-- fix SCSS compiling issues
+### Deleted dependencies
 
-## [3.0.2] 2021-12-14
+```
+react-html-parser
+react-tilt
+```
 
-### Update and Improvements
+### Added dependencies
 
-- Update Bootstrap to v5.1.3
-- Add new page - Chat/messages
-- Fix sidebar scroll issue
-- Fix Authentication Pages navbar issue
-- Update inputs to work with 'value'
-- Fix Dark Mode issues for dropdowns, blur cards
-- Fix sidebar background color on resize
+```
+html-react-parser
+vanilla-tilt
+```
 
-## [3.0.1] 2021-08-24
+### Updated dependencies
 
-### Update and Improvements
+```
+@asseinfo/react-kanban               2.1.0          →         2.2.0
+@emotion/cache                       11.4.0         →         11.7.1
+@emotion/react                       11.4.1         →         11.8.1
+@emotion/styled                      11.3.0         →         11.8.1
+@fullcalendar/daygrid                5.9.0          →         5.10.1
+@fullcalendar/interaction            5.9.0          →         5.10.1
+@fullcalendar/react                  5.9.0          →         5.10.1
+@fullcalendar/timegrid               5.9.0          →         5.10.1
+@mui/icons-material                  5.1.1          →         5.4.2
+@mui/material                        5.1.1          →         5.4.3
+@mui/styled-engine                   5.1.1          →         5.4.2
+@react-leaflet/core                  1.0.2          →         1.1.1
+@testing-library/jest-dom            5.11.4         →         5.16.2
+@testing-library/react               11.1.0         →         12.1.3
+@testing-library/user-event          12.1.10        →         13.5.0
+chroma-js                            2.1.2          →         2.4.2
+dropzone                             5.9.2          →         5.9.3
+prop-types                           15.7.2         →         15.8.1
+react-countup                        5.2.0          →         6.1.1
+react-images-viewer                  1.6.7          →         1.7.1
+react-leaflet                        2.7.0          →         3.2.5
+react-router-dom                     5.2.0          →         6.2.1
+react-scripts                        4.0.3          →         5.0.0
+react-select                         4.3.1          →         5.2.2
+stylis                               4.0.10         →         4.0.13
+stylis-plugin-rtl                    2.1.0          →         2.1.1
+sweetalert2                          11.1.2         →         11.4.4
+web-vitals                           1.0.1          →         2.1.4
+yup                                  0.32.9         →         0.32.11
+```
 
-- Fix broken links
-- Fix Documentation links
-- Fix old Documentation styling
-- Fix sidebar logo color on dark-version
-- Update background-color
-- Update pricing
+### Warning
 
-## [3.0.0] 2021-08-16
+There are 2 warnings related to the stylis-plugin-rtl and @pathofdev/react-tag-input dependencies that won't affect on the behavior of the product its something with these libraries itself.
 
-### Update and Improvements
+## [3.0.0] 2021-11-23
 
-- Update Bootstrap to v5.1.0
-- Update to Material Design 2
-- Add more example pages
-- Add Light/Dark feature
-- New Documentation version
+### Bug fixing
 
-## [2.1.2] 2020-03-13
+### Major style changes
 
-### BugFixing
+- Migration from JSS to MUI `styled` api, emotion and `sx` prop.
+- The `box-shadow`, `border-radius` and `typography` `regular` size renamed to `md` for theme
+- The `backgroundColor` prop renamed to `bgColor` for components
+- The `boxShadow` prop renamed to `shadow` for components
+- SoftBox `backgroundGradient` prop replaced with `variant: ["contained", "gradient"]`
+- SoftButton `buttonColor` prop renamed to `color`
+- SoftSocialButton `buttonColor` prop renamed to `color`
+- SoftBadge `size` prop updated to ["xs", "sm", "md", "lg"]
+- SoftBadgeDot `size` prop updated to ["xs", "sm", "md", "lg"]
+- SoftBadgeDot `gradient` prop replaced with `variant: ["contained", "gradient"]`
+- SoftInput `withIcon` prop renamed to `icon`
+- SoftProgress `gradient` prop replaced with `variant: ["contained", "gradient"]`
+- SoftTypography `textColor` prop renamed to `color`
+- SoftSnackbar `type` prop renamed to `color`
+- New prop `bgWhite` added for SoftSnackbar
+- WheatherCard renamed to WeatherCard
+- WheatherCard `wheather` prop renamed to `weather`
+- PageRoutes renamed to page.routes.js
+- Sidenav is more dynamic now, color, brand, brandName props are added
 
-- Fixed the perfectScrollbar plugin issue
-- Change name color variables from `$brand-*color` to `$*color`
+### Deleted components
 
-## [2.1.1] 2020-02-21
+### Added components
 
-### Improvements, BugFixing
+- src/examples/Cards/BlogCards/SimpleBlogCard
+- src/examples/Cards/BlogCards/WavedBlogCard
+- src/examples/Cards/TeamCards/DefaultTeamCard
+- src/examples/Cards/TeamCards/ComplexTeamCard
+- src/examples/Cards/PricingCards/OutlinedPricingCard
+- src/examples/Cards/PricingCards/WavedPricingCard
+- src/examples/Cards/ProfileCards/SimpleProfileCard
+- src/examples/Cards/ProfileCards/DefaultProfileCard
+- src/examples/Cards/ProfileCards/ComplexProfileCard
+- src/examples/Cards/BackgroundCards/DefaultBackgroundCard
+- src/examples/Cards/BackgroundCards/SimpleBackgroundCard
 
-- Fixed the broken links
+### Deleted dependencies
 
-## [2.1.0] 2018-11-13
+```
+- jss
+- jss-rtl
+- @mui/styles
+```
 
-### Improvements, BugFixing
+### Added dependencies
 
-- Changes for responsive devices
-- Improvements and BugFixing for documentation
-- Change versions on CSS and JS files
-- DataTable responsive fixes
-- Example Pages small establishments
-- Pro Documentation integrated in Free Version
-- New page - Error Page 404
-- Eliminated extra CSS and JS
+```
+@three-ts/orbit-controls
+```
 
-## [2.0.2] 2018-06-21
+### Updated dependencies
 
-### BugFixing
+```
+@mui/icons-material                5.0.0-rc.1       →     5.1.1
+@mui/material                      5.0.0-rc.1       →     5.1.1
+@mui/styled-engine                 5.0.0-rc.1       →     5.1.1
+react-quill                        2.0.0-beta.2     →     1.3.5
+```
 
-- Multilevel dropdown integration
-- Small changes for responsive devices
-- Fixed-plugin in user archive integration
-- Speed optimizations
-- Documentation errors fixed
-- Gulp compiling of the SASS files
-- Change versions on CSS and JS files
-- Small changes for components
+### Warning
 
-## [2.0.1] 2018-03-21
+## [2.0.0] 2021-09-20
 
-### BugFixing
+### Bug fixing
 
-- Fixed validation inputs
-- Fixed SweetAlert
-- Navbar dropdown fixed on mobile responsive
+### Major style changes
 
-## [2.0.0] 2018-03-15
+- Migration from Material-UI v4 to Material-UI v5.
+- Customizing Autocomplete component based on the Soft Design.
+- Customizing the TextField component based on the Soft Design.
 
-### Bootstrap 4 update
+### Deleted components
 
-- Core base code on Bootstrap 4
-- Documentation code base written from scratch
-- Speed optimizations
-- Class changes :
-  .card-block to .card-body
-  .navbar-toggleable-_ to .navbar-expand-_
-  .hidden-_-down to .d-none .d-_-block
-  .hidden-_-up to .d-_-none
-  .checkbox to .form-check
-  .radio to .form-check
-- more class changes here: https://getbootstrap.com/docs/4.0/migration/
-- Bug fixes for responsive devices
-- Small changes for components
+### Added components
 
-## [1.2.1] 2017-11-17
+### Deleted dependencies
 
-### RTL Support
+```
+- @material-ui/core
+- @material-ui/icons
+- @material-ui/styles
+```
 
-- added new page with `RTL Support`
+### Added dependencies
 
-### BugFixing
+```
+- @emotion/cache
+- @emotion/react
+- @emotion/react
+- @emotion/styled
+- @mui/icons-material
+- @mui/material
+- @mui/styled-engine
+- @mui/styles
+- stylis
+- stylis-plugin-rtl
+```
 
-- SweetAlert fixed on IE and browser console fixed error
-- Replaced `es6-promise-auto.min.js` library with `core.js` (CDN script)
-- `Chartist.js` fixed error from browser console
-- `PerfectScrollbar` fixed on IE
+### Updated dependencies
 
-## [1.2.0] 2017-09-05
+### Warning
 
-### BugFixing, Plugin Change
+The soft-ui-dashboard-pro-react/pages/rtl is chaning the route slowly in development mode its a problem with @emotion/cache `prepend` and we will fix it on our future updates.
 
-- Added a new Sidebar-menu ( the old one was replaced ) and a new color for the Sidebar-menu `red` with `white` the active color
-- Plugins that were updated to the latest versions:
-  - jquery.min.js `3.2.1`
-  - es6-promise-auto.min.js `4.1.1`
-  - noUiSlider.min.js `10.0.0`
-  - chartist.min.js `0.11.0`
-  - fullcalendar.min.js `3.5.0`
-  - jquery.bootstrap-wizard.js `1.4.2`
-  - jquery.select-bootstrap.js `1.12.2`
-- Added `Arrive.js` library for elements that are inserted dinamically
-- Removed `jquery.mobile-1.4.5.min.js` library because this it's not compatible with jquery 3+
-- Added version in CSS and JS links
-- Bug Fixes
+## [1.0.0] 2021-09-02
 
-## [1.1.0] 2016-11-17
-
-### BugFixing, Plugin Change
-
-- Fix bug on main panel > content while you use the Sidebar Mini
-- Replaced select plugin with a more complex select `bootstrap-select`
-- Added File Input library by Jasny
-- change filter colors for example pages
-- fix Charts responsive issue when switching from Desktop to Mobile
-- added `PerfectScrollbar` just for Windows, fix problem in MacOs and Ubuntu
-
-## [1.0.0] 2016-11-03
-
-### Initial Release
+### Original Release
